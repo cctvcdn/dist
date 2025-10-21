@@ -1,0 +1,83 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: ${process.env.FE_DOMAIN || 'https://live.chuoichientv.com'}/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_nuxt/
+Disallow: /.nuxt/
+
+# Allow important pages
+Allow: /
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /tin-tuc/
+Allow: /live/
+Allow: /lich-thi-dau
+Allow: /ket-qua
+
+# Specific rules for news articles
+Allow: /tin-tuc/
+Allow: /live/
+
+# Prevent duplicate content - only allow canonical URLs
+Allow: /tin-tuc/*/
+Allow: /live/*/
+
+# Allow Google and other search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Allow AI training bots for better indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+# Block aggressive scrapers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10 
